@@ -37,8 +37,6 @@ namespace TypingDetector
             if (message.Author.IsBot) { return; }
             var pattern = @"<@\d+>";
             var processed = Regex.Replace(message.Content, pattern, "");
-            Console.WriteLine(message.Content);
-            Console.WriteLine(processed);
             var warn = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "warn.png");
             if (!string.IsNullOrWhiteSpace(processed))
             {
